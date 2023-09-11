@@ -1,18 +1,21 @@
 # Laravel Nova Signature
 
 This [Nova](https://nova.laravel.com/) field lets you save a signature as a field for your resource.
+It's based on the work of [lab404/nova-signature](https://packagist.org/packages/lab404/nova-signature) that works only with Nova 3 as fare as I know.
 
-Behind the scenes [WangShayne/vue-signature](https://github.com/WangShayne/vue-signature) is used.
+Behind the scenes [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature) is used.
 
-![screenshot of nova signature](https://github.com/404labfr/nova-signature/raw/master/screenshots/signature.png?raw=true)
+Note that vue3-signature doesn't expose all signature pad component so to get it working it was required to patch library to add support for "begin" and "end" event 
+[lab404/nova-signature](https://github.com/lab404/nova-signature)
+
 
 ## Installation
 
-`composer require lab404/nova-signature`
+`composer require eom/nova-signature`
 
 ## Usage
 
-In your nova resource make the field `Lab404\NovaSignature\NovaSignature`.
+In your nova resource make the field `Eom\NovaSignature\NovaSignature`.
 This field fits perfectly with a `TEXT` column and can be used both for resources and actions.
 
 ```php
@@ -36,7 +39,6 @@ NovaSignature::make('Signature')
     ->bgColor('white') // (string) Same as 'color'
     ->width('100%') // (string) Any css compatible value: "100%", "200px", ...
     ->height('250px') // (string) Same as 'width'
-    ->saveOnChanges() // () Save the signature at every change and it will hide the Attach button
 ```
 
 ### Validation
