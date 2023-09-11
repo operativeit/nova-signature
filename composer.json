@@ -1,13 +1,23 @@
 {
     "name": "eom/nova-signature",
-    "description": "A Laravel Nova field.",
+    "description": "Digital signature Nova field.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "field",
+        "signature"
+    ],
+    "authors": [
+        {
+            "name": "Sebastien CRAMATTE",
+            "email": "oss@operativeit.es",
+            "homepage": "https://operativeit.es"
+        }
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0|^9.0|^10.0"
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
