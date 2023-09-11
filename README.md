@@ -1,4 +1,4 @@
-# Laravel Nova Signature
+# Laravel Nova 4 Signature
 
 This [Nova](https://nova.laravel.com/) field lets you save a signature as a field for your resource.
 It's based on the work of [lab404/nova-signature](https://packagist.org/packages/lab404/nova-signature) that works only with Nova 3 as fare as I know.
