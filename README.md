@@ -5,7 +5,7 @@ It's based on the work of [lab404/nova-signature](https://packagist.org/packages
 
 Behind the scenes [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature) is used.
 
-Note that vue3-signature doesn't expose all signature pad components so to get it working with our component it was required to patch library to propagate "begin" and "end" event to parent component as I was unable to use watcher as in the previous version [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature).
+Note that vue3-signature doesn't expose all signature pad components so to get it working with our component it was required to patch library to propagate "begin" and "end" event to parent component as I was unable to use a watcher as in the previous version [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature).
 
 Here our patched fork [operativeit/vue3-signature](https://github.com/operativeit/vue3-signature).
 
