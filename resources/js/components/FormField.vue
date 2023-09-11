@@ -1,0 +1,111 @@
+<template>
+  <DefaultField
+    :field="field"
+    :errors="errors"
+    :show-help-text="showHelpText"
+    :full-width-content="fullWidthContent"
+  >
+    <template #field>
+  <Vue3Signature :sigOption="{penColor: color, backgroundColor}" :w="width" :h="height"
+                 :disabled="disabled"  ref="signature" class="form-input-bordered rounded" @begin="onBegin" @end="onEnd" />
+
+  <div class="flex flex-col md:flex-row md:items-center justify-center md:justify-end space-y-2 md:space-y-0 space-x-3 my-2">
+  <button type="button"
+          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold h-9 px-3"
+          @click="undo">
+          <component
+            :is="`heroicons-outline-reply`"
+            height="18"
+            width="18"
+          />
+
+</button>
+  <button type="button"
+          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold h-9 px-3"
+          @click="clear">
+          <component
+            :is="`heroicons-outline-x`"
+            height="18"
+            width="18"
+          />
+  </button>
+  </div>
+
+      <textarea 
+        :id="field.attribute"
+        type="text"
+        class="hidden"
+        v-model="value" rows="10"
+      >
+        {{value}}
+      </textarea>
+
+    </template>
+  </DefaultField>
+</template>
+
+<script>
+import { FormField, HandlesValidationErrors } from 'laravel-nova'
+
+export default {
+  mixins: [FormField, HandlesValidationErrors],
+  props: ['resourceName', 'resourceId', 'field'],
+  data() {
+      return {
+          height: '300px',
+          width: '100%',
+          color: 'black',
+          bgColor: 'white',
+          disabled: false,
+      }
+  },
+  mounted() {
+	/*
+        this.$nextTick().then(() => {
+            if (this.field.value) {
+                this.value = this.field.value;
+                this.$refs.signature.fromDataURL(this.value);
+            }
+        });
+        */
+    },
+  methods: {
+    clear() {
+        this.$refs.signature.clear()
+    },
+
+    undo() {
+        this.$refs.signature.undo()
+    },
+
+    onBegin() {
+    },
+
+    onEnd() {
+       this.save();
+    },
+
+    save() {
+      if (this.$refs.signature.isEmpty()) {
+        this.value = null;
+      } else {
+        this.value = this.$refs.signature.save();
+      }
+    },
+   
+    /*
+     * Set the initial, internal value for the field.
+     */
+    setInitialValue() {
+      this.value = this.field.value || ''
+    },
+
+    /**
+     * Fill the given FormData object with the field's internal value.
+     */
+    fill(formData) {
+      formData.append(this.fieldAttribute, this.value || '')
+    },
+  },
+}
+</script>
