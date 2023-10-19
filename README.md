@@ -25,11 +25,15 @@ In your nova resource make the field `Eom\NovaSignature\NovaSignature`.
 This field fits perfectly with a `TEXT` column and can be used both for resources and actions.
 
 ```php
+use EomPlus\NovaSignature\Signature;
+
+// ...
+
 public function fields()
 {
     return [
         // ...
-        NovaSignature::make('Signature'),
+        Signature::make('Signature'),
         // ...
     ];
 }
@@ -40,7 +44,7 @@ public function fields()
 Showed example values are the default ones.
 
 ```php
-NovaSignature::make('Signature')
+Signature::make('Signature')
     ->color('black') // (string) Any css compatible value: "red", "rgb(0, 0, 0)", ...
     ->bgColor('white') // (string) Same as 'color'
     ->width('100%') // (string) Any css compatible value: "100%", "200px", ...
@@ -54,11 +58,11 @@ We also provide the `validSignature` method that adds `nullable` and `signature`
 
 ```php
 // With validSignature() 
-NovaSignature::make('Signature')
+Signature::make('Signature')
     ->validSignature() // 'nullable' and 'signature' rules
 
 // Your own rules
-NovaSignature::make('Signature')
+Signature::make('Signature')
     ->rules('signature', ...) 
 ```
 
