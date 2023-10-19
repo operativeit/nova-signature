@@ -3,6 +3,12 @@
 This [Nova](https://nova.laravel.com/) field lets you save a signature as a field for your resource.
 It's based on the work of [lab404/nova-signature](https://packagist.org/packages/lab404/nova-signature) that works only with Nova 3 as fare as I know.
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/operativeit/nova-signature.svg?style=flat-square)](https://packagist.org/packages/operativeit/nova-signature)
+[![Total Downloads](https://img.shields.io/packagist/dt/operativeit/nova-signature.svg?style=flat-square)](https://packagist.org/packages/operativeit/nova-signature)
+![GitHub forks](https://img.shields.io/github/forks/operativeit/nova-signature)
+![GitHub issues](https://img.shields.io/github/issues/operativeit/nova-signature)
+[![License](https://img.shields.io/packagist/l/operativeit/nova-signature)](https://github.com/operativeit/nova-signature/blob/master/LICENSE)
+
 Behind the scenes [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature) is used.
 
 Note that vue3-signature doesn't expose all signature pad components so to get it working with our component it was required to patch library to propagate "begin" and "end" event to parent component as I was unable to use a watcher as in the previous version [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature).
@@ -11,7 +17,7 @@ Here our patched fork [operativeit/vue3-signature](https://github.com/operativei
 
 ## Installation
 
-`composer require eom/nova-signature`
+`composer require eom-plus/nova-signature`
 
 ## Usage
 
