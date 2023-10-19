@@ -26,6 +26,8 @@ Here our patched fork [operativeit/vue3-signature](https://github.com/operativei
 In your nova resource make the field `Eom\NovaSignature\NovaSignature`.
 This field fits perfectly with a `TEXT` column and can be used both for resources and actions.
 
+On your database schema, you must use text type for the signature field as data are store in base64 format directly into database.
+
 ```php
 use EomPlus\NovaSignature\Signature;
 
@@ -40,6 +42,11 @@ public function fields()
     ];
 }
 ```
+
+## Todo list
+- Fix styles with different devices
+- Language localization
+- 
 
 ## Configuration
 
