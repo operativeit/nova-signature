@@ -77,5 +77,5 @@ Take a look to our Github repositories as we have a lot of forked nova component
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/dcasia/nova-welcome-card/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/operativeit/nova-signature/blob/master/LICENSE.md) for more information.
 
