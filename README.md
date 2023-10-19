@@ -41,11 +41,6 @@ public function fields()
 }
 ```
 
-## Todo list
-- Fix styles with different devices
-- Fix index and detail vue
-- Language localization
-
 ## Configuration
 
 Showed example values are the default ones.
@@ -72,6 +67,16 @@ Signature::make('Signature')
 Signature::make('Signature')
     ->rules('signature', ...) 
 ```
+### Translations
+
+Currenlty we have include  french, spanish and english translations.
+If you want to add more language you publish  translations with the following command
+
+```
+php artisan vendor:publish --provider=EomPlus\NovaSignature\FieldServiceProvider --tags=translations
+```
+
+If you add more languages don't hesitate to send us a PR.
 
 ## ⭐️ Show Your Support
 
