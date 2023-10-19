@@ -1,5 +1,5 @@
 {
-    "name": "eom/nova-signature",
+    "name": "eom-plus/nova-signature",
     "description": "Digital signature Nova field.",
     "keywords": [
         "laravel",
@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Eom\\NovaSignature\\": "src/"
+            "EomPlus\\NovaSignature\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Eom\\NovaSignature\\FieldServiceProvider"
+                "EomPlus\\NovaSignature\\FieldServiceProvider"
             ]
         }
     },

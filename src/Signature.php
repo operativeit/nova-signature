@@ -1,10 +1,10 @@
 <?php
 
-namespace Eom\NovaSignature;
+namespace EomPlus\NovaSignature;
 
 use Laravel\Nova\Fields\Field;
 
-class NovaSignature extends Field
+class Signature extends Field
 {
     /**
      * The field's component.
