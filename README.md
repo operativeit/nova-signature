@@ -23,10 +23,8 @@ Here our patched fork [operativeit/vue3-signature](https://github.com/operativei
 
 ## Usage
 
-In your nova resource make the field `Eom\NovaSignature\NovaSignature`.
-This field fits perfectly with a `TEXT` column and can be used both for resources and actions.
-
-On your database schema, you must use text type for the signature field as data are store in base64 format directly into database.
+In your nova resource make the field `EomPlus\NovaSignature\Signature`.
+This field fits perfectly with a `TEXT` column as it store data in base64 format and can be used both for resources and actions.
 
 ```php
 use EomPlus\NovaSignature\Signature;
@@ -42,11 +40,6 @@ public function fields()
     ];
 }
 ```
-
-## Todo list
-- Fix styles with different devices
-- Fix index and detail vue
-- Language localization
 
 ## Configuration
 
@@ -74,6 +67,16 @@ Signature::make('Signature')
 Signature::make('Signature')
     ->rules('signature', ...) 
 ```
+### Translations
+
+Currenlty we have include  french, spanish and english translations.
+If you want to add more language you publish  translations with the following command
+
+```
+php artisan vendor:publish --provider=EomPlus\NovaSignature\FieldServiceProvider --tags=translations
+```
+
+If you add more languages don't hesitate to send us a PR.
 
 ## ⭐️ Show Your Support
 
