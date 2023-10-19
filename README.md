@@ -3,6 +3,8 @@
 This [Nova](https://nova.laravel.com/) field lets you save a signature as a field for your resource.
 It's based on the work of [lab404/nova-signature](https://packagist.org/packages/lab404/nova-signature) that works only with Nova 3 as fare as I know.
 
+![signature 1](https://github.com/operativeit/nova-signature/assets/188766/0d46c72d-987d-4d3c-a0cf-5edcdd18efb8)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/operativeit/nova-signature.svg?style=flat-square)](https://packagist.org/packages/operativeit/nova-signature)
 [![Total Downloads](https://img.shields.io/packagist/dt/operativeit/nova-signature.svg?style=flat-square)](https://packagist.org/packages/operativeit/nova-signature)
 ![GitHub forks](https://img.shields.io/github/forks/operativeit/nova-signature)
