@@ -45,8 +45,8 @@ public function fields()
 
 ## Todo list
 - Fix styles with different devices
+- Fix index and detail vue
 - Language localization
-- 
 
 ## Configuration
 
