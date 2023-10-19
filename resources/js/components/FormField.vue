@@ -61,14 +61,12 @@ export default {
       }
   },
   mounted() {
-	/*
         this.$nextTick().then(() => {
             if (this.field.value) {
                 this.value = this.field.value;
                 this.$refs.signature.fromDataURL(this.value);
             }
         });
-        */
     },
   methods: {
     clear() {
@@ -98,7 +96,7 @@ export default {
      * Set the initial, internal value for the field.
      */
     setInitialValue() {
-      this.value = this.field.value || ''
+      this.value = this.field.value || '';
     },
 
     /**
