@@ -9,25 +9,26 @@
   <Vue3Signature :sigOption="{penColor: color, backgroundColor}" :w="width" :h="height"
                  :disabled="disabled"  ref="signature" class="form-input-bordered rounded" @begin="onBegin" @end="onEnd" />
 
-  <div class="flex flex-col md:flex-row md:items-center justify-center md:justify-end space-y-2 md:space-y-0 space-x-3 my-2">
+  <div class="flex flex-row align-middle md:items-center justify-center md:justify-end space-x-1 space-y-0 md:space-x-3 my-2">
   <button type="button"
-          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold h-9 px-3"
+          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm inline-block font-bold w-1/2 md:w-32 h-9 px-3"
           @click="undo">
           <component
             :is="`heroicons-outline-reply`"
             height="18"
             width="18"
-          />
-
-</button>
+            class="inline"
+          /> {{__('novaSignature.undo') }}
+  </button>
   <button type="button"
-          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold h-9 px-3"
+          class="shadow bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm inline-block font-bold w-1/2 md:w-32 h-9 px-3"
           @click="clear">
           <component
             :is="`heroicons-outline-x`"
             height="18"
             width="18"
-          />
+            class="inline"
+          /> {{__('novaSignature.clear') }}
   </button>
   </div>
 
