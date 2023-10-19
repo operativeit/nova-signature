@@ -7,7 +7,7 @@ It's based on the work of [lab404/nova-signature](https://packagist.org/packages
 [![Total Downloads](https://img.shields.io/packagist/dt/operativeit/nova-signature.svg?style=flat-square)](https://packagist.org/packages/operativeit/nova-signature)
 ![GitHub forks](https://img.shields.io/github/forks/operativeit/nova-signature)
 ![GitHub issues](https://img.shields.io/github/issues/operativeit/nova-signature)
-[![License](https://img.shields.io/packagist/l/operativeit/nova-signature)](https://github.com/operativeit/nova-signature/blob/master/LICENSE)
+[![License](https://img.shields.io/packagist/l/operativeit/nova-signature)](https://github.com/operativeit/nova-signature/blob/master/LICENSE.md)
 
 Behind the scenes [WangShayne/vue3-signature](https://github.com/WangShayne/vue3-signature) is used.
 
