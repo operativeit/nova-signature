@@ -35,7 +35,7 @@
       <textarea 
         :id="field.attribute"
         type="text"
-        class="hidden"
+        class="w-full"
         v-model="value" rows="10"
       >
         {{value}}
@@ -61,8 +61,11 @@ export default {
       }
   },
   mounted() {
+        console.log('-mounted');
         this.$nextTick().then(() => {
+            console.log('--nextTick');
             if (this.field.value) {
+                console.log(this.field.value);
                 this.value = this.field.value;
                 this.$refs.signature.fromDataURL(this.value);
             }
@@ -78,9 +81,11 @@ export default {
     },
 
     onBegin() {
+       console.log('--vue3-signature-on-begin');
     },
 
     onEnd() {
+       console.log('--vue3-signature-on-end');
        this.save();
     },
 
