@@ -51,7 +51,7 @@ Signature::make('Signature')
     ->bgColor('white') // (string) Same as 'color'
     ->width('100%') // (string) Any css compatible value: "100%", "200px", ...
     ->height('250px') // (string) Same as 'width'
-    ->asSvg() // Save image as SVG format, you can use asJpg() instead to save as JPEG. By default format is PNG.
+    ->asSvg() // Save image as SVG format, you can use asJpg() to save as JPEG instead. By default format is PNG.
 ```
 
 ### Validation
