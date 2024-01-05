@@ -35,7 +35,7 @@
       <textarea 
         :id="field.attribute"
         type="text"
-        class="w-full"
+        class="w-full w-hidden"
         v-model="value" rows="10"
       >
         {{value}}
